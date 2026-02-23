@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;700;900&display=swap');
+
+@theme {
+  --font-serif: "DM Serif Display", serif;
+  --font-editorial: "Libre Baskerville", serif;
+  --font-sans: "Inter", sans-serif;
+  --color-japandi-cream: #F9F8F4;
+  --color-japandi-dark: #1A1A1A;
+  --color-japandi-black: #121212;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker 60s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Evening Theme specific contrast override */
+.theme-evening h2, .theme-evening h4 {
+  color: #1a2b3c;
+}
